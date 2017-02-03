@@ -1,5 +1,5 @@
-Varnish on Alphine in Docker
-============================
+Varnish on Alpine in Docker
+===========================
 
 Varnish version: 4.1.2
 
