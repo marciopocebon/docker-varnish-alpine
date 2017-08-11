@@ -1,9 +1,10 @@
 #!/bin/bash
 
-set -e
+set -eo pipefail
 
 if [[ "${VCL}" ]]; then
-  echo "${VCL}" | base64 -d > /etc/varnish/default.vcl
+  echo "${VCL}" | base64 -d > ${VCL_CONFIG}
 fi
 
-exec varnishd -F -f ${VCL_CONFIG} -s malloc,${CACHE_SIZE} ${VARNISHD_PARAMS}
+varnishd -F -f ${VCL_CONFIG} -s malloc,${CACHE_SIZE} ${VARNISHD_PARAMS} &&
+varnishncsa
