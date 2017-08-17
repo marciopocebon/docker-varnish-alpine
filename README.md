@@ -1,7 +1,7 @@
 Varnish on Alpine in Docker
 ===========================
 
-Varnish version: 4.1.2
+Varnish version: 4.1.3
 
 Usage
 -----
@@ -13,5 +13,9 @@ docker run -d \
   bugcrwod/varnish-aphine
 ```
 
-The VCL_CONFIG must point to your varnish config. Mount a volume and point
+Environment Variable Options
+----------------------------
+
+*   VCL_CONFIG - Where the varnish config is located inside the container. Mount a volume and point
 VCL_CONFIG to the vcl file in the mount.
+*   VCL - Base64 encoded VCL. Useful if you are running this on a cluster where mounting volumes is impractical
