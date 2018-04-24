@@ -10,7 +10,7 @@ Usage
 docker run -d \
   -v $PWD:/data \
   --env 'VCL_CONFIG=/data/varnish.vcl' \
-  bugcrwod/varnish-aphine
+  bugcrowd/varnish-alpine
 ```
 
 Environment Variable Options
