@@ -2,7 +2,7 @@ FROM alpine:3.6
 
 RUN apk add --no-cache \
   tini \
-  varnish=4.1.3-r1
+  varnish=4.1.9-r0
 
 ENV VCL_CONFIG      /etc/varnish/default.vcl
 ENV CACHE_SIZE      64m

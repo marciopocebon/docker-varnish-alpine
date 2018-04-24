@@ -1,7 +1,7 @@
 Varnish on Alpine in Docker
 ===========================
 
-Varnish version: 4.1.3
+Varnish version: 4.1.9
 
 Usage
 -----
